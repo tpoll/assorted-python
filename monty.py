@@ -49,5 +49,6 @@ def monty_switch():
 	return "switch door win rate: " + str(((win/tries) * 100))
 
 
-print monty_stay()
-print monty_switch()
+if __name__ == '__main__':
+	print monty_stay()
+	print monty_switch()
