@@ -33,6 +33,8 @@ def parse_poem(url):
         
 
 # returns a json dump of poem info, change xrange to get more or less
+# runs very slow on input > 1,000. Meant to be run once and then inputted into
+# a database
 def crawl_poems():
         poems = []
         for x in xrange(237100, 249800):
