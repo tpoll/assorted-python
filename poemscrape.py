@@ -37,10 +37,12 @@ def parse_poem(url):
 # a database
 def crawl_poems():
         poems = []
+        count = 237100
         for x in xrange(237100, 249800):
+                count += 10  #avoid repeats from strange link properties 
                 try:
                         temp = parse_poem("http://www.poetryfoundation.org/poem/" 
-                                                                        + str(x))
+                                                                        + str(count))
                         if temp != "empty": #only add if tags are present
                                 poems.append(temp)
                 except:
